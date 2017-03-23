@@ -1,30 +1,49 @@
-@media screen and (min-width: 480px) {
-  #primary {
-    width: 50%;
+@media screen and (min-width: 380px) {
+  #myCarousel {
+    top: 150px;
+  }
+  figcaption {
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 400px) {
+
+  /*#gallery li {
+    width: 28.3333%;
+  }*/
+
+  /*#gallery li: nth-child(4n) {
+    clear: left;
+  }*/
+
+  .profile-photo {
     float: left;
+    margin: 0 5% 80px 0;
   }
-  #secondary {
-    width: 40%;
-    float: right;
+  #wrapper {
+    top: 250px;
   }
 }
 
-/*#gallery li {
-  width: 28.3333%;
-}*/
+@media screen and (min-width: 530px) {
 
-/*#gallery li: nth-child(4n) {
-  clear: left;
-}*/
-
-.profile-photo {
-  float: left;
-  margin: 0 5% 80px 0;
+  h1 {
+    font-size: 7vw;
+  }
+  nav li {
+    font-size: 3vw;
+  }
+  #wrapper {
+    top: 150px;
+  }
+  figcaption {
+    font-size: medium;
+  }
 }
 
 
-
-@media screen and (min-width: 660px) {
+@media screen and (min-width: 642px) {
   nav {
     background: none;
     float: right;
@@ -32,6 +51,10 @@
     margin-right: 5%;
     text-align: right;
     width: 45%;
+  }
+
+  nav li {
+    font-size: 1em;
   }
 
   #logo {
@@ -53,5 +76,27 @@
   header {
     border-bottom: 5px solid #599a68;
     margin-bottom: 60px;
+  }
+
+  #gallery {
+    flex-flow: row wrap;
+  }
+
+  #gallery li {
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  #primary {
+    width: 50%;
+    float: left;
+  }
+  #secondary {
+    width: 40%;
+    float: right;
+  }
+  figcaption {
+    font-size: large;
   }
 }

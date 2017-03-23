@@ -36,6 +36,8 @@ header {
   margin: 0 0 30px 0;
   padding: 5px 0 0 0;
   width: 100%;
+  position: fixed;
+  z-index: 1;
 }
 
 #logo {
@@ -46,7 +48,7 @@ header {
 h1 {
   font-family: 'Amatic SC', sans-serif;
   margin: 15px 0;
-  font-size: 3.75em;
+  font-size: 10vw;
   font-weight: normal;
   line-height: 0.8em;
 }
@@ -75,11 +77,12 @@ nav ul {
 
 nav li {
   display: inline-block;
+  font-size: 5vw;
 }
 
 nav a {
   font-weight: 800;
-  padding: 15px 10px;
+  padding: 5px 5px;
 }
 
 /********************
@@ -108,17 +111,31 @@ Page: Band Members
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex: 1;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
 
 #gallery li {
-  float: left;
-  width: 45%;
-  margin: 2.5%;
   color: #bdc3c7;
+  width: 100%;
+  margin: 2% 0;
 }
 
 #gallery li p {
   background-color: #e47b23;
+}
+
+#gallery li a {
+  display: flex;
+  flex-direction: column;
+}
+
+#gallery li a figcaption {
+  font-size: .8rem;
 }
 
 #gallery li a p {
@@ -128,6 +145,9 @@ Page: Band Members
   font-family: 'Chewy', sans-serif;
 }
 
+#gallery img {
+max-height: 250px;
+}
 
 /********************
 Page: Medicine Cabinet
@@ -145,7 +165,7 @@ h3 {
 }
 
 section {
-  color: #3dc;
+  color: #def;
 }
 
 section a{
@@ -178,6 +198,20 @@ Page: Contact
   background-image: url('../img/phone.png');
 }*/
 
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+  clear: both;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 /********************
 Colors
@@ -187,9 +221,10 @@ Colors
 body {
   background-color: #e47b23;
   color: #e9e;
+  min-width: 380px;
 }
 
-/* green header */
+/* purple header */
 header {
   background: #6c21ed;
   border-color: #599a68;
@@ -216,11 +251,71 @@ nav a, nav a:visited {
 }
 
 /* selected nav link color */
-nav a.selected, nav a:hover {
+nav a:hover {
   color: #dc23ff;
 }
 
 /* Copyright statement*/
 footer p {
   color: #000;
+}
+
+/* Phot Captions */
+figcaption {
+    color: #1fbae4;
+    padding-bottom: 25px;
+}
+
+/********************
+Wrapper
+********************/
+
+#wrapper {
+  position: relative;
+  top: 200px;
+}
+
+
+
+/********************
+Parallax
+********************/
+
+/*body, html {
+  height: 100%
+}
+  .parallax {
+      /* The image used */
+    /*  background-image: <img src="img/DNAlien.PNG" alt="">;
+
+      /* Set a specific height */
+    /*  height: 100%;
+
+      /* Create the parallax scrolling effect */
+      /*background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+
+  /********************
+  Carousel
+  ********************/
+
+  #myCarousel {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+.carousel-indicators {
+  bottom: 0;
+}
+
+.carousel-indicators .active {
+  background-color: #222;
+}
+
+.carousel-indicators li {
+  border-color: #222;
 }
