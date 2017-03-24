@@ -255,6 +255,10 @@ nav a:hover {
   color: #dc23ff;
 }
 
+nav a.selected{
+  color: #dc23ff;
+}
+
 /* Copyright statement*/
 footer p {
   color: #000;
